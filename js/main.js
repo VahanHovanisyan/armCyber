@@ -6,6 +6,24 @@ const trainersList = document.querySelector(".trainers__list");
 const stylesheet = document.styleSheets[2];
 const trainersDescr = document.querySelectorAll('.trainers__descr');
 const wrapper = document.body;
+const carouselWrap = document.querySelector('.carousel__wrap');
+const carouselItem = document.querySelectorAll('.carousel__item');
+const carouselButton = document.querySelectorAll('.carousel__button');
+
+
+
+
+carouselItem.forEach((element, i) => {
+    element.style.setProperty('--slide-length', `${carouselItem?.length}`);
+    element.addEventListener('click', () => {
+        carouselWrap.style.transform = `rotateZ(${-325 / carouselItem?.length * (i + 3)}deg)`
+
+        carouselButton.forEach((img, i) => {
+            // img.style.transform = `rotateZ(360deg / ${-carouselItem.length} * var(--img-num));`
+            img.style.setProperty('--img-num', 11)
+        })
+    })
+});
 
 trainersDescr.forEach(descrEl => {
     descrEl.setAttribute('aria-hidden', 'true')
@@ -76,7 +94,7 @@ navItems.forEach(el => {
         if (burger.classList.contains("burger_active")) {
             burgerClose()
         }
-        
+
     })
 })
 const disableScroll = () => {
@@ -140,8 +158,8 @@ mediaQueryMinWidth_1200.addEventListener("change", (e) => {
             });
             nav.inert = false;
             disableScroll();
-        } 
-        if(!burger.classList.contains('burger_active')) {
+        }
+        if (!burger.classList.contains('burger_active')) {
             nav.inert = true;
         }
     }

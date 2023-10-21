@@ -126,6 +126,12 @@ html {
   transform: scale(0.8);
 }
 
+.btn-reset {
+  padding: 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
 
 .dis-scroll {
   position: fixed;

@@ -1,3 +1,88 @@
+/* carousel */
+
+.main__carousel-container{
+    overflow: hidden;
+}
+
+.carousel {
+	--slider-height: calc(400px + (880 - 400) * ((100vw - 320px) / (1512 - 320)));
+	--half-slider-height: calc(var(--slider-height) / 2);
+	position: relative;
+	width: var(--slider-height);
+	height: var(--slider-height);
+	color: #fff;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	right: var(--half-slider-height);
+    bottom: 50px;
+    /* transform: translateX(50%); */
+	/* bottom: 35vw; */
+	/* transform: rotate(-360deg); */
+}
+@media(min-width:1512px){
+	.carousel{
+		--slider-height: 880px
+	}
+	
+}
+
+.carousel__wrap {
+	background: url(../img/Star.png) center / contain no-repeat;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: transform 0.3s ease 0s;
+	transform: rotateZ(-325deg);
+
+}
+
+.carousel__item {
+	width: 100px;
+	height: 100px;
+	cursor: pointer;
+	position: absolute;
+	left: 0;
+	transform: rotateZ(calc(325deg / var(--slide-length) * var(--img-num))) translateY(calc(var(--half-slider-height) / 2));
+	transform-origin: var(--half-slider-height);
+}
+
+.carousel__button {
+	transition: all 0.3s ease 0s;
+}
+
+.carousel__item-img {
+	width: 80px;
+	height: 80px;
+	transition: all 0.3s ease 0s;
+	transform: rotateZ(calc(325deg / -7 * var(--img-num)));
+}
+
+.carousel__collapse {
+	width: 250px;
+	height: 150px;
+	font-size: 19px;
+	padding: 20px;
+	overflow: hidden;
+	text-align: justify;
+	color: #797777;
+	background: #8e8e8e;
+	transform: rotateZ(calc(325deg / -7 * var(--img-num))) translateX(50%);
+}
+.carousel__collapse_open{
+}
+
+.carousel__body {
+}
+
+/* /carousel */
+
 /* clients section =======================================*/
 .clients {
     padding-top: 50px;
