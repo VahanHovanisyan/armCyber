@@ -1,0 +1,39 @@
+.hero {
+    padding-bottom: 165px;
+}
+
+.hero__link-box {
+    display: flex;
+    justify-content: center;
+}
+
+@media(min-width:576px){
+    .hero__link-box {
+        justify-content: end;
+    }
+}
+
+.hero__link {
+    padding: 20px 25px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 215px;
+    background: #000F21;
+    box-shadow: 10px 10px 25px 0px rgba(0, 7, 15, 0.90), -10px -10px 20px 0px rgba(0, 23, 51, 0.90), 10px -10px 20px 0px rgba(0, 7, 15, 0.20), -10px 10px 20px 0px rgba(0, 7, 15, 0.20), -1px -1px 2px 0px rgba(0, 7, 15, 0.50) inset, 1px 1px 2px 0px rgba(0, 23, 51, 0.30) inset;
+}
+
+.hero__link:active {
+    box-shadow: 10px 10px 25px 0px rgba(0, 7, 15, 0.90) inset, -10px -10px 20px 0px rgba(0, 23, 51, 0.90) inset, 10px -10px 20px 0px rgba(0, 7, 15, 0.20) inset, -10px 10px 20px 0px rgba(0, 7, 15, 0.20) inset, -1px -1px 2px 0px rgba(0, 7, 15, 0.50), 1px 1px 2px 0px rgba(0, 23, 51, 0.30);
+}
+
+.hero__title {
+    margin-bottom: 50px;
+    font-size: 32px;
+}
+
+.hero__text {
+    margin-bottom: 80px;
+    letter-spacing: 0.32px;
+    font-size: 20px;
+}
+

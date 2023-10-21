@@ -1,0 +1,175 @@
+.hero{
+    padding-top: 35px;
+}
+
+.hero__container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+@media(min-width:992px) {
+    .hero__container {
+        flex-direction: row;
+    }
+}
+
+.aside {
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    padding: 75px 25px 45px 25px;
+    border-radius: 40px;
+    border: 1px solid #E0E0E0;
+    box-shadow: 30px 30px 75px 0px rgba(0, 6, 13, 0.90), -30px -30px 60px 0px rgba(0, 24, 53, 0.90), 30px -30px 60px 0px rgba(0, 6, 13, 0.20), -30px 30px 60px 0px rgba(0, 6, 13, 0.20), -1px -1px 2px 0px rgba(0, 6, 13, 0.50) inset, 1px 1px 2px 0px rgba(0, 24, 53, 0.30) inset;
+}
+
+@media(min-width:992px) {
+    .aside {
+        align-self: flex-start;
+    }
+}
+
+@media(max-width:576px) {
+    .aside {
+        padding: 25px;
+    }
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.aside__img {
+    /* width: 124px;
+    height: 146px; */
+    align-self: center;
+    margin-bottom: 90px;
+}
+
+.form__label {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 17px;
+    align-items: center;
+    grid-template-areas:
+        'icon text'
+        'input input';
+}
+
+.form__icon {
+    width: 32px;
+    height: 32px;
+    grid-area: icon;
+}
+
+.form__small-title {
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 700;
+    grid-area: text;
+}
+
+.form__input {
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    border-bottom: 1px solid #fff;
+    grid-area: input;
+}
+
+.form__trainer {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.form__trainer-title {
+    margin-bottom: 20px;
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.form__name-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 50px;
+}
+
+.form__program-logo {
+    margin-bottom: 90px;
+}
+
+.form__trainer-name {
+    max-width: 120px;
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.form__btn {
+    padding: 0;
+    padding: 10px 45px;
+    align-self: center;
+    border-radius: 167px;
+    background: #506987;
+}
+
+.form__btn:hover {
+    background: linear-gradient(to bottom left, #000F21 1%, #63A4CF 100%);
+}
+
+.hero__title {
+    margin-bottom: 40px;
+    font-size: 36px;
+}
+
+.hero__text {
+    max-width: 910px;
+    margin-bottom: 100px;
+    font-size: 16px;
+}
+
+.accordion__body p {
+    margin: 0;
+}
+
+.accordion__button {
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+}
+
+.accordion__button {
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    border: none;
+    width: 100%;
+    display: flex;
+    border-bottom: 1px solid #fff;
+}
+.accordion__button_active .accordion__arrow{
+transform: rotate(-90deg);
+}
+.accordion__arrow {
+    width: 20px;
+    height: 20px;
+    margin-right: 15px;
+    transition: transform 0.3s ease 0s;
+}
+
+.accordion__text {
+    padding-top: 15px;
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0.2px;
+}
